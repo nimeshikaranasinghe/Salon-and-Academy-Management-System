@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e280941-6258-487c-ac57-b89c5f3d7f20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     appointment.`phone` AS appointment_phone,
+     appointment.`app_id` AS appointment_app_id,
+     appointment.`app_type` AS appointment_app_type,
+     appointment.`status` AS appointment_status,
+     appointment.`price` AS appointment_price
+FROM
+     `appointment` appointment]]>
+	</queryString>
+	<field name="appointment_phone" class="java.lang.Integer"/>
+	<field name="appointment_app_id" class="java.lang.Integer"/>
+	<field name="appointment_app_type" class="java.lang.String"/>
+	<field name="appointment_status" class="java.lang.String"/>
+	<field name="appointment_price" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="502" height="33" uuid="8a0c71eb-098f-4efa-bd17-b64c18671db7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Deepika Gunasekara Saloon Pvt Ltd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="48" width="174" height="22" uuid="a006769d-1747-4123-a2db-cc01f3fe4664"/>
+				<text><![CDATA[Appointment report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="464" y="-23" width="189" height="93" uuid="d23eecde-6468-4e78-9b20-95ee70fb8532"/>
+				<imageExpression><![CDATA["C:\\Users\\User\\Videos\\logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="7b0b6ed0-471e-4e4b-805d-26e720bf9cec"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="111" height="15" uuid="7033f435-674a-40dc-9712-5507d5015031"/>
+				<text><![CDATA[Phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="19" width="111" height="15" uuid="bdb0e190-35af-49cd-b6c9-741e7de3c13f"/>
+				<text><![CDATA[Appoinment ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="19" width="111" height="15" uuid="eff6e10e-794c-47e3-8395-84f70e21352f"/>
+				<text><![CDATA[ Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="3dde7897-c146-44b1-80e0-a8d3bda5a9a3"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="e0bc0397-916b-4b3d-8a26-3735b846d5b7"/>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="1b56574e-a53e-421b-baad-10b8a521422b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="98de3a71-4c43-4075-bf6d-61246f93a2cb"/>
+				<textFieldExpression><![CDATA[$F{appointment_phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="8505d54c-949e-41bb-b1fe-1cecf2e52d80"/>
+				<textFieldExpression><![CDATA[$F{appointment_app_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="92726a46-04cc-44df-8f3f-040566cde27b"/>
+				<textFieldExpression><![CDATA[$F{appointment_app_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="c0a8cc0c-56cc-45a9-9b9a-9531fe8da7b4"/>
+				<textFieldExpression><![CDATA[$F{appointment_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="65fb778e-74f4-40d7-9fa5-1b22847dcd96"/>
+				<textFieldExpression><![CDATA[$F{appointment_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="7d9060fd-ce4b-402b-aa58-61b0bec67c82"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="cc1d4d1c-681d-45a5-bcdd-c77012907ba4"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="51696562-3017-4e1d-9b81-48f8e40b69f4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="68f1d75d-7838-4acc-8bda-59da91032d6b"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="100" height="20" uuid="3bf2dff2-52c0-4568-9a40-1000b0128d96"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="100" height="20" uuid="3bf2dff2-52c0-4568-9a40-1000b0128d96"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
