@@ -1,0 +1,17 @@
+Project Name: Bridal Beauty Salon and Academy Management System
+Client Organization : Deepika Gunasekara Salon and Acedemy pvt(Ltd)
+Project ID : ITP-16-METRO-WD-B2-G5
+
+Leader Details : 
+		Name -S.S.R.D.M De Silva
+		IT No- IT15102560
+		Contact No - 0770053513
+
+Group Members :
+		Ranasinghe R.A.N.I. - IT15127174
+		Athipola R.W.S.K. - IT13045722
+		Kumarasiri  S.D.D.C. - IT15134936
+		Ratnayake R.M.T.U. - IT15127938
+		Chathubhashini N.D.J. - IT15134554
+		Kahaduwa K.K.U.S. - IT15134240
+		Dolawatta I.H. - IT15140562
